@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --main-color: rgb(0, 182, 199);
+    --my-grey: rgb(42, 48, 55);
+    --active-green: rgb(0, 199, 0);
+}
+.forms {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+.SignUpForm, .LoginForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 0;
+    width: 25rem;
+    height: 30rem;
+    background: #000;
+}
+.LoginForm {
+    gap: 100px;
+}
+.formDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+button[type="submit"] {
+    width: 285px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin: 1px;
+}
+.username, .email, .password {
+    background-color: #2A3038;
+    border: 1px solid transparent;
+    outline: 0;
+    width: 300px;
+    height: 30px;
+    color: #cacaca;
+    margin: 25px;
+    padding-left: 5px;
+}
+.password {
+    margin: 0;
+    border: 0;
+    width: 280px;
+}
+.username:focus {
+    border: 1px solid var(--active-green) !important;
+}
+.email:focus {
+    border: 1px solid var(--active-green) !important;
+}
+input::placeholder {
+    color: #cacaca;
+}
+form > h1 {
+    margin: 30px;
+}
+.deleteModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    font-size: 15px;
+    color: #fff;
+}
+/* .material-symbols-outlined {
+    user-select: none;
+    margin: 1px 5px 0 0;
+    font-size: 20px;
+}
+span {
+    position: relative;
+    color: red;
+    height: 20px;
+    width: 200px;
+    font-size: 10px;
+    font-weight: 500;
+} */
+.inputDiv {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+.changedButton {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: 500;
+    z-index: 2;
+    margin: 5px 0 0 0;
+}
+.changedButton:hover {
+    color: rgb(0, 149, 255);
+}
+.firstCircleAnimation {
+    animation: 0.3s linear forwards firstAnimate;
+}
+
+@keyframes firstAnimate {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-320px);
+    }
+}
+.secondCircleAnimation {
+    animation: 0.3s linear forwards secondAnimate;
+}
+.errorDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 168, 168);
+    text-align: center;
+    border: 1px solid rgb(255, 33, 33);
+    border-radius: 5px;
+    color: #000;
+    width: 80%;
+    height: 40px;
+    display: none;
+    margin: 0 0 10px 0;
+}
+.passAndCheck {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    margin: 25px;
+    background-color: #2A3038;
+    border: 1px solid transparent;
+}
+.checkbox {
+    margin: 0;
+    width: 13px;
+}
+.wrapper {
+    padding: 2px;
+    z-index: 0;
+    background: linear-gradient(to left, var(--main-color), #2A3038);
+    animation: wrapper 3s infinite linear;
+    background-size: 400%;
+}
+
+@keyframes wrapper {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
